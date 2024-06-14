@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="NES Jam 2024 Submission"
+run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=256
+window/size/viewport_height=240
+window/size/mode=3
+window/size/resizable=false
+window/stretch/mode="viewport"
 
 [rendering]
 
