@@ -11,7 +11,3 @@ func _change_state(new_state: State):
 	if state is State:
 		state._exit_state()
 	new_state._enter_state()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
