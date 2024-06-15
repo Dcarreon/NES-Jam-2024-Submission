@@ -1,0 +1,107 @@
+[gd_scene load_steps=13 format=3 uid="uid://c5jjr7qcai0m3"]
+
+[ext_resource type="Texture2D" uid="uid://i3rjmu1l5yv6" path="res://assets/ColorSelector-Sheet.png" id="1_u0gij"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23myf"]
+atlas = ExtResource("1_u0gij")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8y8w"]
+atlas = ExtResource("1_u0gij")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvdn0"]
+atlas = ExtResource("1_u0gij")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1shw2"]
+atlas = ExtResource("1_u0gij")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c13ob"]
+atlas = ExtResource("1_u0gij")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhcvw"]
+atlas = ExtResource("1_u0gij")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8ibe"]
+atlas = ExtResource("1_u0gij")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op5qw"]
+atlas = ExtResource("1_u0gij")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ieqkk"]
+atlas = ExtResource("1_u0gij")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjggr"]
+atlas = ExtResource("1_u0gij")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g5qw7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23myf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8y8w")
+}],
+"loop": true,
+"name": &"Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvdn0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1shw2")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c13ob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhcvw")
+}],
+"loop": true,
+"name": &"None",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8ibe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op5qw")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ieqkk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjggr")
+}],
+"loop": true,
+"name": &"Up",
+"speed": 5.0
+}]
+
+[node name="ColorSelector" type="AnimatedSprite2D"]
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_g5qw7")
+animation = &"Up"
+frame_progress = 0.0452305
