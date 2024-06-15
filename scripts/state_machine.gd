@@ -4,7 +4,7 @@ extends Node
 @export var state: State 
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready():
 	_change_state(state)
 
 func _change_state(new_state: State):
