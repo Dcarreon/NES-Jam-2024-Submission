@@ -6,6 +6,7 @@ extends CharacterBody2D
 
 @onready var animated_sprite := $AnimatedSprite2D
 @onready var input_state := $InputState
+@onready var animation_state := $AnimationState
 @onready var move_state := $InputState/PlayerMoveState
 
 func _ready():
@@ -18,12 +19,13 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-#	# Direction = 1 signifies that the sprite is moving right. Direction = -1 sigifies that it's moving left
-#	# By default the sprite faces right
-#	if direction > 0:
-#		animated_sprite.flip_h = false;
-#	elif direction < 0:
-#		animated_sprite.flip_h = true;
+	# Direction = 1 signifies that the sprite is moving right. Direction = -1 sigifies that it's moving left
+	var direction = Input.get_axis("move_left","move_right")
+	# By default the sprite faces right
+	if direction > 0:
+		animated_sprite.flip_h = false;
+	elif direction < 0:
+		animated_sprite.flip_h = true;
 #
 #	if is_on_floor():
 #		if direction == 0:
