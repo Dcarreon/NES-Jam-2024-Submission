@@ -1,21 +1,32 @@
 class_name PlayerSelectionState
 extends State
 
-@export player: CharacterBody2D
+@export var player: CharacterBody2D
 
-signal selection_state_up
-signal selection_state_down
-signal selection_state_left
-signal selection_state_right
+signal _output(output: String)
+signal _entered
+signal _exited
 
 func _ready():
-    _set_process(false)
+	set_process_input(false)
 
 func _enter_state() -> void:
-    _set_process(true)
+	_entered.emit()
+	set_process_input(true)
 
 func _exit_state() -> void:
-    _set_process(false)
+	_exited.emit()
+	set_process_input(false)
 
-func _process() -> void:
-    pass
+func _input(event: InputEvent):
+	var direction := event.as_text()
+	print(direction)
+	match direction:
+		"W":
+			_output.emit("up")
+		"S":
+			_output.emit("down")
+		"A":
+			_output.emit("left")
+		"D":
+			_output.emit("right")

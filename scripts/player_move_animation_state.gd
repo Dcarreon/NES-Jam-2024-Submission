@@ -16,10 +16,18 @@ func _exit_state() -> void:
 func _process(delta: float) -> void:
 	var direction := Input.get_axis("dpad_left", "dpad_right")  
 
-	if direction == 0:
-		player_sprite.play("idle")
-	else:
-		player_sprite.play("run")
+	if not player.is_idle:
+		if direction > 0:
+			player_sprite.flip_h = false;
+		elif direction < 0:
 
-	if not player.is_on_floor():
-		player_sprite.play("jump")
+			player_sprite.flip_h = true;
+		if direction == 0:
+			player_sprite.play("idle")
+		else:
+			player_sprite.play("run")
+
+		if not player.is_on_floor():
+			player_sprite.play("jump")
+	else:
+		player_sprite.play("idle")

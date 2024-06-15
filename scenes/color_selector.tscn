@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://c5jjr7qcai0m3"]
+[gd_scene load_steps=14 format=3 uid="uid://c5jjr7qcai0m3"]
 
 [ext_resource type="Texture2D" uid="uid://i3rjmu1l5yv6" path="res://assets/ColorSelector-Sheet.png" id="1_u0gij"]
+[ext_resource type="Script" path="res://scripts/color_selector.gd" id="2_1a5iv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_23myf"]
 atlas = ExtResource("1_u0gij")
@@ -104,4 +105,5 @@ animations = [{
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_g5qw7")
 animation = &"Up"
-frame_progress = 0.133554
+frame_progress = 0.389367
+script = ExtResource("2_1a5iv")

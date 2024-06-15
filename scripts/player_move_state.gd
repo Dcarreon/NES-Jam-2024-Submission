@@ -11,6 +11,7 @@ func _enter_state() -> void:
     set_physics_process(true)
 
 func _exit_state() -> void:
+    player.velocity.x = move_toward(player.velocity.x, 0, player.SPEED)	
     set_physics_process(false)
 
 func _physics_process(delta: float) -> void:
