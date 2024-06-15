@@ -14,7 +14,7 @@ func _exit_state() -> void:
 	set_process(false) 
 
 func _process(delta: float) -> void:
-	var direction := Input.get_axis("move_left", "move_right")  
+	var direction := Input.get_axis("dpad_left", "dpad_right")  
 
 	if direction == 0:
 		player_sprite.play("idle")

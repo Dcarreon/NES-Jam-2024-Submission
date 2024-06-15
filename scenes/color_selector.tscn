@@ -104,4 +104,4 @@ animations = [{
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_g5qw7")
 animation = &"Up"
-frame_progress = 0.0452305
+frame_progress = 0.133554
