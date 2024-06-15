@@ -1,6 +1,7 @@
 class_name PlayerMoveAnimationState
 extends State
 
+@export var player: CharacterBody2D
 @export var player_sprite: AnimatedSprite2D
 
 func _ready():
@@ -19,3 +20,6 @@ func _process(delta: float) -> void:
 		player_sprite.play("idle")
 	else:
 		player_sprite.play("run")
+
+	if not player.is_on_floor():
+		player_sprite.play("jump")

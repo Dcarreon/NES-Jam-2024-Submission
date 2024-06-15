@@ -155,6 +155,7 @@ player = NodePath("../..")
 script = ExtResource("3_jck7x")
 state = NodePath("PlayerMoveAnimationState")
 
-[node name="PlayerMoveAnimationState" type="Node" parent="AnimationState" node_paths=PackedStringArray("player_sprite")]
+[node name="PlayerMoveAnimationState" type="Node" parent="AnimationState" node_paths=PackedStringArray("player", "player_sprite")]
 script = ExtResource("5_u8ldm")
+player = NodePath("../..")
 player_sprite = NodePath("../../AnimatedSprite2D")
