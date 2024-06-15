@@ -5,9 +5,9 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	change_state(state)
+	_change_state(state)
 
-func change_state(new_state: State):
+func _change_state(new_state: State):
 	if state is State:
 		state._exit_state()
 	new_state._enter_state()
