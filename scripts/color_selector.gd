@@ -17,11 +17,11 @@ func _deactivate() -> void:
 func _change_selection(selection: String):
 	selected = selection
 	match selection:
-		"up":
+		"Up":
 			play("Up")
-		"down":
+		"Down":
 			play("Down")
-		"left":
+		"Left":
 			play("Left")
-		"right":
+		"Right":
 			play("Right")

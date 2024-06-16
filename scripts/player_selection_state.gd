@@ -22,10 +22,10 @@ func _input(event: InputEvent):
 	var direction := event.as_text()
 	match direction:
 		"W":
-			_output.emit("up")
+			_output.emit("Up")
 		"S":
-			_output.emit("down")
+			_output.emit("Down")
 		"A":
-			_output.emit("left")
+			_output.emit("Left")
 		"D":
-			_output.emit("right")
+			_output.emit("Right")
