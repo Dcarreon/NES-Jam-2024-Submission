@@ -20,7 +20,6 @@ func _exit_state() -> void:
 
 func _input(event: InputEvent):
 	var direction := event.as_text()
-	print(direction)
 	match direction:
 		"W":
 			_output.emit("up")
