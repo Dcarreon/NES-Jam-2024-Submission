@@ -30,4 +30,4 @@ func _process(delta: float) -> void:
 		if not player.is_on_floor():
 			player_sprite.play("jump")
 	else:
-		player_sprite.play("idle")
+		player_sprite.play("jump")
